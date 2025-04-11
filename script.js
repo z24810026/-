@@ -6,7 +6,7 @@ let currentTypeOrder ="income"
 function getAllRecords() {
     console.log("✅ 開始查詢資料");
 
-    fetch("https://api.minamicode.dev/api/records")
+    fetch("http://3.25.97.16:8080/api/records")
         .then(response => response.json())
         .then(data => {
             console.log("✅ 拿到資料：", data);
@@ -99,7 +99,7 @@ function deleteSelectedRecords(){
     if(!confirmed)return;
 
     Promise.all(idsToDelete.map(id=>
-        fetch(`https://api.minamicode.dev/api/records/delete/${id}`)
+        fetch(`http://3.25.97.16:8080/api/records/delete/${id}`)
     ))
     .then(()=>{
         alert("✅資料已刪除");
@@ -158,7 +158,7 @@ function saveEditedRecord(){
         note:cells[6].innerText.trim()
     };
 
-    fetch(`https://api.minamicode.dev/api/records/${id}`,{
+    fetch(`http://3.25.97.16:8080/api/records/${id}`,{
         method:"PUT",
         headers:{
             "Content-Type":"application/json"
@@ -210,7 +210,7 @@ function confirmAdd(){
             note:note
         };
     //4.傳送POST至後端
-    fetch("https://api.minamicode.dev/api/records",{
+    fetch("http://3.25.97.16:8080/api/records",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
@@ -258,7 +258,7 @@ function searchByNote(){
         alert("請輸入要查詢的備註關鍵字");
         return;
     }
-    fetch(`https://api.minamicode.dev/api/records/search?note=${encodeURIComponent(keyword)}`)
+    fetch(`http://3.25.97.16:8080/api/records/search?note=${encodeURIComponent(keyword)}`)
     .then(response=>response.json())
     .then(data=>{
         console.log("🔍 備註查詢結果：",data)
@@ -279,7 +279,7 @@ function searchByDateRange(){
         alert("請選擇起點和結束日期")
         return;
     }
-    fetch(`https://api.minamicode.dev/api/records/between?start=${start}&end=${end}`)
+    fetch(`http://3.25.97.16:8080/api/records/between?start=${start}&end=${end}`)
     .then(response=>response.json())
     .then(data=>{
         console.log("📅 區間查詢結果：",data);
