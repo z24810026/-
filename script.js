@@ -158,7 +158,7 @@ function saveEditedRecord(){
         note:cells[6].innerText.trim()
     };
 
-    fetch(`https://api.minamicode.dev/api/records/delete/${id}`,{
+    fetch(`https://api.minamicode.dev/api/records/${id}`,{
         method:"PUT",
         headers:{
             "Content-Type":"application/json"
