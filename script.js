@@ -6,7 +6,7 @@ let currentTypeOrder ="income"
 function getAllRecords() {
     console.log("✅ 開始查詢資料");
 
-    fetch("http://localhost:8080/api/records")
+    fetch("https://api.minamicode.dev/api/records")
         .then(response => response.json())
         .then(data => {
             console.log("✅ 拿到資料：", data);
