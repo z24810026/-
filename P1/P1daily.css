@@ -50,6 +50,10 @@ body{
     transition: background-color 0.3s ease;
   }
 
+.button:hover{
+    background-color: pink;
+}
+
 /*底下GRID的骨架*/
 .grid-container{
     display: flex;
