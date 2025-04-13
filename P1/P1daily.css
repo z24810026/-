@@ -8,63 +8,55 @@ body{
 }
 
 /*上方網頁標題的方塊*/
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
+.container {
     width: 100%;
     background-color: #f2f5f7;
-    position: relative;
-}
+    padding: 30px 20px;
+    text-align: center;
 
-/*標題的設計*/
-.container h1{
-    color: #333333;
-    font-size: 36px;
+}
+.title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* ✅ 螢幕小時自動變上下排列 */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .title-row h1 {
+    font-size: clamp(24px, 5vw, 48px); /* 螢幕大小自動調整字體 */
     margin: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    color: #333333;
+    text-align: center;
+}  
 
-/*前往收支管理系統的按鈕*/
-.container a{
-    text-decoration: none;/*移除底線*/
-    color:#333333 ;
-    position: absolute;/*絕對定位*/
-    font-size: 24px;
-    right: 60px;
-    top: 50%;/*垂直位置在容器高度一半*/
-    transform: translateY(-50%);/* 向上偏移一半高度，達到垂直置中 */
-}
-
-/*按鈕的設定*/
-.button{
-    background-color:#ffd1dc ;
-    font-size: 20px;
+.title-row .button {
+    color: #333333;
+    background-color: #ffd1dc;
+    font-size: clamp(14px, 2vw, 20px);
     text-decoration: none;
     padding: 12px 30px;
     border-radius: 12px;
-    display: inline-block;
     transition: background-color 0.3s ease;
-  }
-
-.button:hover{
+}
+  
+.title-row .button:hover {
     background-color: pink;
 }
+  
 
 /*底下GRID的骨架*/
 .grid-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
     background-color: #f2f5f7;
-    width: 100%;
-    display: grid;/*使用CSS Grid排版系統*/
-    grid-template-columns:repeat(2,600px) ;/*水平列出兩列*/
-    grid-template-rows:repeat(3,500px) ;/*垂直排列三列*/
-    gap:20px;/*格子之間的間距為20px*/
 }
 
 /*GRID裡格子的設計*/
@@ -84,15 +76,15 @@ body{
     flex-direction: column; /*子元素垂直排列*/
     align-items: center;/*水平置中所以子元素*/
     padding:20px 0;
-    font-size: 24px;
+    font-size:clamp(18px,2vw,24px);
     font-weight: bold;
     color:#333333;
 }
 
 /*內文區塊*/
 .box-text{
-    text-decoration: none;
-    font-size: 18px;
+    padding: 20px;
+    font-size:clamp(14px,1.8vw,18px);
     line-height: 1.6; /*行高*/
     color:#333333;
     text-align: left;
