@@ -7,35 +7,35 @@
   <link rel="stylesheet" href="B1.css">
 </head>
 <body>
-  <h1>查詢所有資料</h1>
+  <h1>全データの検索</h1>
   <div class="button-row">
-    <button onclick="getAllRecords()">載入全部資料</button>
-    <button onclick="openAddForm()">➕新增資料</button>
-    <button onclick="deleteSelectedRecords()">刪除以勾選的資料</button>
-    <button onclick="saveEditedRecord()">儲存變更</button>
-    <button onclick="onlyShowExp()">只顯示支出</button>
-    <button onclick="onlyShowInc()">只顯示收入</button>
+    <button onclick="getAllRecords()">全データを読み込む</button>
+    <button onclick="openAddForm()">➕データを追加</button>
+    <button onclick="deleteSelectedRecords()">チェックしたデータを削除</button>
+    <button onclick="saveEditedRecord()">変更を保存</button>
+    <button onclick="onlyShowExp()">支出のみ表示</button>
+    <button onclick="onlyShowInc()">収入のみ表示</button>
     <br>
   </div>
   <div class="search-bar">
     <input type="text" id="noteKeyword" placeholder="輸入關鍵字查備註">
-    <button onclick="searchByNote()">備註查詢</button>
+    <button onclick="searchByNote()">備考で検索</button>
     <input type="date" id="startDate">
     <label>~</label>
     <input type="date" id="endDate">
-    <button onclick="searchByDateRange()">查詢日期區間</button>
+    <button onclick="searchByDateRange()">日付範囲で検索</button>
   </div>
   <br><br>
   <table border="1">
     <thead>
       <tr>
-        <th>選取</th>
+        <th>選択</th>
         <th>ID</th>
-        <th onclick="sortByDate()">日期</th>
-        <th onclick="sortByType()">類型</th>
-        <th>分類</th>
+        <th onclick="sortByDate()">日付</th>
+        <th onclick="sortByType()">種別</th>
+        <th>カテゴリ</th>
         <th onclick="sortByAmount()">金額 ⬍</th>
-        <th>備註</th>
+        <th>備考</th>
       </tr>
     </thead>
     <tbody id="tableBody"></tbody>

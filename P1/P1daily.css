@@ -1,0 +1,96 @@
+body{
+    display: flex;/*使用fiex排版，讓子元素能夠置中對齊*/
+    flex-direction: column; /*子元素垂直排列*/
+    align-items: center;/*水平置中所以子元素*/
+    font-family: "MS Mincho", "Hiragino Mincho Pro", "Songti SC", serif;
+    margin: 0;/*移除預設編劇，避免外圍多餘空白*/
+    padding: 0px;/*頁面內部上下左右留20px空間*/
+}
+
+/*上方網頁標題的方塊*/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background-color: #f2f5f7;
+    position: relative;
+}
+
+/*標題的設計*/
+.container h1{
+    color: #333333;
+    font-size: 36px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*前往收支管理系統的按鈕*/
+.container a{
+    text-decoration: none;/*移除底線*/
+    color:#333333 ;
+    position: absolute;/*絕對定位*/
+    font-size: 24px;
+    right: 60px;
+    top: 50%;/*垂直位置在容器高度一半*/
+    transform: translateY(-50%);/* 向上偏移一半高度，達到垂直置中 */
+}
+
+/*按鈕的設定*/
+.button{
+    background-color:#ffd1dc ;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 12px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+/*底下GRID的骨架*/
+.grid-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f5f7;
+    width: 100%;
+    display: grid;/*使用CSS Grid排版系統*/
+    grid-template-columns:repeat(2,600px) ;/*水平列出兩列*/
+    grid-template-rows:repeat(3,500px) ;/*垂直排列三列*/
+    gap:20px;/*格子之間的間距為20px*/
+}
+
+/*GRID裡格子的設計*/
+.grid-box{
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0;/*背景顏色為淡灰色*/
+    border: 1px solid #ccc;/*灰色邊框，寬度為1px*/
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);/*添加淡淡的陰影，讓格子立體一點*/
+}
+
+/*格子裡的標題區塊設定*/
+.box-title{
+    background-color: #ffd1dc;
+    display: flex;/*使用fiex排版，讓子元素能夠置中對齊*/
+    flex-direction: column; /*子元素垂直排列*/
+    align-items: center;/*水平置中所以子元素*/
+    padding:20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color:#333333;
+}
+
+/*內文區塊*/
+.box-text{
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.6; /*行高*/
+    color:#333333;
+    text-align: left;
+}
+
