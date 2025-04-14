@@ -15,6 +15,8 @@ h1{
 
 /*按鈕基本樣式*/
 button{
+    width: 50%;/*設定輸入匡250px*/
+    max-width: 200px;
     font-weight: bold;
     padding: 10px 18px;/*上下10px 左右18px的內間距，讓按鈕不壅擠*/
     margin: 10px 5px;/*上下10px 左右5px，按鈕與按鈕間的間距*/
@@ -23,7 +25,7 @@ button{
     color: #333333;/*按鈕文字為白色*/
     border-radius: 6px;/*四個角設為圓弧形，看起來更柔和*/
     cursor: pointer;/*滑鼠移過去會變成手指狀，表示可點擊*/
-    font-size: 16px;/*按鈕文字大小適中。font就是按鈕裡的文字*/
+    font-size: clamp(8PX,2vw,16px);
     transition: background-color 0.3s;/*css的動畫屬性，
     當滑鼠一上去hover時，花0.3秒變成hover的顏色，會有滑順效果*/
 }
@@ -68,8 +70,9 @@ input[type="checkbox"]{
     padding: 10px 14px; /*設定內距：上下為8左右為12，讓文字不要貼邊*/
     border: 1px solid #ccc;/*設定邊框為1px，寬、顏色是淡灰色*/
     border-radius: 8px; /*圓角為8px，讓邊角比較圓潤*/
-    font-size: 16px; /*設定字體大小為16px*/
-    width: 220px;/*設定輸入匡250px*/
+    font-size: clamp(8px,2vw,16px);
+    width: 100%;/*設定輸入匡250px*/
+    max-width: 175px;
     transition: border-color 0.3s ease;/*增加動畫效果，邊框顏色變化會在0.3秒內平滑過渡*/
 }
 
@@ -82,8 +85,9 @@ input[type="checkbox"]{
     padding: 10px 14px; 
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 16px;
-    width: 120px;
+    font-size: clamp(8px,2vw,16px);
+    width: 100%;/*設定輸入匡250px*/
+    max-width: 175px;
     transition: border-color 0.3s ease;
 }
 
@@ -96,8 +100,9 @@ input[type="checkbox"]{
     padding: 10px 14px; 
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 16px;
-    width: 120px;
+    font-size: clamp(8px,2vw,16px);
+    width: 100%;/*設定輸入匡250px*/
+    max-width: 175px;
     transition: border-color 0.3s ease;
 }
 
