@@ -1,3 +1,65 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;         /* 固定在畫面上 */
+    top: 0;                  /* 頂部對齊視窗 */
+    left: 0;                 /* 左側對齊視窗 */
+    width: 100%;             /* 寬度全滿 */
+    height: 100%;
+    max-height: 60px;
+    background-color: #fff;  /* 背景為白色，不會透出底下 */
+    z-index: 1000;           /* 疊在最上面 */
+    padding: 0 20px ;         /* 上下內距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 下方陰影讓它浮起來 */
+}
+
+.menu-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    max-height: 40px;
+}
+
+.button{
+    width: 100%;
+    max-width: 135px;
+    margin: 10px 5px;
+    font-size: clamp(14px,2vw,16px);
+    color: #333333;
+    background-color: #ffd1dc;
+    text-decoration: none;
+    padding: 6px 30px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover{
+    background-color: pink;
+}
+
+.accountName{
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    max-height: 40px;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(16px,2vw,20px);
+    border: 2px solid black;
+    padding: 0 8px;
+    border-radius: 50px;
+    background-color:white;
+    font-weight: bold;
+}
+
+
 /*整體頁面置中對齊*/
 body{
     font-family: "MS Mincho", "Hiragino Mincho Pro", "Songti SC", serif;
