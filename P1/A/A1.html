@@ -14,8 +14,6 @@
     <div class="menu-button">
       <a href="/P1/A/A1.html" class="button">HOME</a>
       <a href="/P1/B/B1.html" class="button">データ一覧</a>
-      <a href="/P1/noInfo.html" class="button">収入データ</a>
-      <a href="/P1/noInfo.html" class="button">支出データ	</a>
     </div>
 </header>
   
@@ -31,7 +29,7 @@
   <div class="totalAssetBlock">
     <div class="Asset-box">
       <div class="box-title">総資産</div>
-      <div class="box-text">$0</div>
+      <div class="box-text" id="totalAssetAmount">$0</div>
     </div>
   </div>
 
@@ -42,13 +40,15 @@
     <!--左邊：總支出-->
     <div class="bottom-box">
       <div class="box-title">總支出</div>
-      <div class="box-text">$0</div>
+      <div class="box-text" id="totalExpenseAmount">$0</div>
     </div>
 
     <!--右邊：總收入-->
     <div class="bottom-box">
       <div class="box-title">總收入</div>
-      <div class="box-text">$0</div>
+      <div class="box-text" id="totalIncomeAmount">$0</div>
     </div>
   </div>
+  <script src="A1.js"></script>
 </body>
+</html>
