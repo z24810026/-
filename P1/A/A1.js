@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded",function(){
-    fetch("https://minamicode.dev/api/records")
+    fetch("https://api.minamicode.dev/api/records")
     .then(response=>response.json())
     .then(data=>{
         let totalIncome = 0;
